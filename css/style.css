@@ -1,0 +1,156 @@
+/* Variables */
+:root {
+    --Violet: #674baf;
+    --Soft-Magenta: #e882e8;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../images/bg-desktop.svg);
+    background-repeat: no-repeat;
+    font-family: Poppins;
+    background-color: var(--Violet);
+    color: white;
+}
+
+/* container */
+.container {
+    padding: 20px 80px;
+}
+
+/* Container section*/
+.container .section{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+    margin-block-start: 50px;
+}
+
+
+/* Section 1 */
+
+.section_1 img {
+    max-width: 100%;
+}
+
+/* Section 2 */
+
+.section_2 {
+    margin-top: 40px;
+}
+
+.section_2 h1{
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    line-height: 55px;
+    padding-inline-end: 150px;
+}
+
+.section_2 p {
+    padding-inline-end: 120px;
+    margin-bottom: 20px;
+    font-family: 'Open Sans';
+}
+
+.section_2 a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: white;
+    color: var(--Violet);
+    padding: 10px 60px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 3px black;
+}
+
+.section_2 a:hover {
+    background-color: var(--Violet);
+    color: white;
+    border: 1px solid white;
+}
+
+/* footer */
+
+footer {
+    margin-top: 25px;
+    display: flex;
+    justify-content: end;
+    padding-inline-end: 90px;
+}
+
+footer a {
+    display: inline-block;
+    padding: 10px;
+}
+
+footer a img {
+    width: 35px;
+    padding: 5px;
+    border: 1px solid white;
+    border-radius: 100%;
+}
+
+/* Media queries */
+
+@media screen and (max-width: 1000px) {
+    .container {
+        padding: 20px 50px;
+    }
+    .section_2 h1 {
+        padding-inline-end: 50px;
+    }
+    .section_2 p {
+        padding-inline-end: 70px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .container .section{
+        display: grid;
+        grid-template-columns: none;
+    }
+    .section_2 {
+        text-align: center;
+    }
+    .section_2 h1 {
+        padding-inline-end: 0px;
+    }
+    .section_2 p {
+        padding-inline-end: 0px;
+    }
+    footer {
+        justify-content: center;
+        padding-inline-end: 0px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .section_2 {
+        margin-top: 0px;
+        gap: 0px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    body {
+        background-image: url(../images/bg-mobile.svg);
+    }
+    header img {
+        width: 124px;
+    }
+    .container .section {
+        margin-block-start: 20px;
+        gap: 10px;
+    }
+    .section_2 {
+        margin-top: 0px;
+    }
+    .section_2 h1{
+        font-size: 25px;
+    }
+}
